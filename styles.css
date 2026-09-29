@@ -177,7 +177,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 42%;
   animation: hero-in 1.8s ease-out both;
 }
 
@@ -308,16 +308,7 @@ h2 {
   line-height: 1.25;
 }
 
-.beat { display: grid; grid-template-columns: 52px 1fr; gap: 8px 16px; margin: 0 0 22px; }
-
-.num {
-  margin: 0;
-  font-family: var(--serif);
-  font-size: 28px;
-  color: var(--red);
-}
-
-.beat p:last-child { margin: 4px 0 0; }
+.beat { margin: 0 0 18px; }
 
 .story-photo img {
   width: 100%;
@@ -328,7 +319,7 @@ h2 {
 
 .facts {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin: 40px 0 0;
   padding: 0;
