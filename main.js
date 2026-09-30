@@ -82,9 +82,46 @@ sections.forEach((section) => observer.observe(section));
 
 const motionOk = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+const stage = document.querySelector("[data-stage]");
+
+if (stage) {
+  const slides = [...stage.querySelectorAll(".stage-slide")];
+  const dots = [...stage.querySelectorAll(".stage-dots button")];
+  let current = 0;
+  let timer = 0;
+
+  const show = (index) => {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle("is-on", i === current));
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("is-on", i === current);
+      dot.setAttribute("aria-selected", String(i === current));
+    });
+  };
+
+  const play = () => {
+    window.clearInterval(timer);
+    if (!motionOk) return;
+    timer = window.setInterval(() => show(current + 1), 4500);
+  };
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      show(index);
+      play();
+    });
+  });
+
+  stage.addEventListener("mouseenter", () => window.clearInterval(timer));
+  stage.addEventListener("mouseleave", play);
+  stage.addEventListener("focusin", () => window.clearInterval(timer));
+  stage.addEventListener("focusout", play);
+  play();
+}
+
 if (motionOk) {
   const revealNodes = document.querySelectorAll(
-    ".section-head, .story-lead, .beat, .story-photo, .facts > div, .credits, .date, .cast li, .reviews blockquote, .tickets-copy, .widget"
+    ".section-head, .story-lead, .beat, .stage, .facts > div, .credits, .date, .cast li, .reviews blockquote, .tickets-copy, .widget"
   );
 
   const revealObserver = new IntersectionObserver(
