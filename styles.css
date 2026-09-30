@@ -184,7 +184,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(8, 12, 22, 0.92) 0%, rgba(8, 12, 22, 0.28) 46%, rgba(8, 12, 22, 0.18) 100%);
+  background:
+    radial-gradient(ellipse 90% 70% at 22% 82%, rgba(8, 12, 22, 0.88) 0%, rgba(8, 12, 22, 0.55) 42%, rgba(8, 12, 22, 0) 72%),
+    linear-gradient(to top, rgba(8, 12, 22, 0.82) 0%, rgba(8, 12, 22, 0.42) 34%, rgba(8, 12, 22, 0.08) 62%, rgba(8, 12, 22, 0) 100%),
+    linear-gradient(to right, rgba(8, 12, 22, 0.45) 0%, rgba(8, 12, 22, 0.12) 48%, rgba(8, 12, 22, 0) 70%);
 }
 
 .hero-content {
@@ -222,13 +225,15 @@ h1 {
   font-size: clamp(56px, 8vw, 104px);
   line-height: 0.88;
   letter-spacing: -0.02em;
+  text-shadow: 0 10px 40px rgba(8, 12, 22, 0.45);
 }
 
 .lead {
   max-width: 460px;
   margin: 18px 0 0;
   font-size: 18px;
-  color: rgba(246, 240, 230, 0.86);
+  color: rgba(246, 240, 230, 0.94);
+  text-shadow: 0 6px 24px rgba(8, 12, 22, 0.45);
 }
 
 .hero-actions {
