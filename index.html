@@ -11,9 +11,9 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip" href="#repertoire">К содержанию</a>
+  <a class="skip" href="#about">К содержанию</a>
 
-  <p class="draft" role="note">Черновик. Роли в составе и даты пока временные.</p>
+  <p class="draft" role="note">Черновик. Роли в составе пока без подписи. Ссылку на виджет билетов и адреса соцсетей подставим, когда пришлёте.</p>
 
   <header class="header" id="top">
     <div class="header-inner">
@@ -29,14 +29,14 @@
       </button>
 
       <nav class="nav" id="nav" aria-label="Разделы страницы">
-        <a href="#repertoire">Репертуар</a>
-        <a href="#dates">Даты</a>
-        <a href="#cast">Состав</a>
-        <a href="#reviews">Отзывы</a>
+        <a href="#about">О спектакле</a>
         <a href="#tickets">Билеты</a>
+        <a href="#cast">Состав</a>
+        <a href="#groups">Группам</a>
+        <a href="#reviews">Отзывы</a>
       </nav>
 
-      <a class="btn btn-small header-cta" href="#tickets">Купить билет</a>
+      <a class="btn btn-small header-cta js-tickets" href="#">Купить билет</a>
     </div>
   </header>
 
@@ -49,13 +49,13 @@
         <h1>Ночные<br>забавы</h1>
         <p class="lead">История одной ночи, которая меняет всё</p>
         <div class="hero-actions">
-          <a class="btn" href="#tickets" data-buy="msk-1">Купить билет</a>
-          <a class="btn btn-ghost" href="#repertoire">О спектакле</a>
+          <a class="btn js-tickets" href="#">Купить билет</a>
+          <a class="btn btn-ghost" href="#about">О спектакле</a>
         </div>
         <dl class="hero-meta">
           <div>
             <dt>Ближайший показ</dt>
-            <dd>12 октября, Москва</dd>
+            <dd>16 октября</dd>
           </div>
           <div>
             <dt>Начало</dt>
@@ -63,7 +63,7 @@
           </div>
           <div>
             <dt>Площадка</dt>
-            <dd>Зал «Площадка»</dd>
+            <dd>Театр на Страстном</dd>
           </div>
         </dl>
       </div>
@@ -71,9 +71,9 @@
 
     <p class="ribbon">По киносценарию Виктора Мережко · к 100-летию Евгения Евстигнеева</p>
 
-    <section class="section" id="repertoire">
+    <section class="section" id="about">
       <div class="section-head">
-        <p class="kicker">Репертуар</p>
+        <p class="kicker">Сюжет</p>
         <h2>О спектакле</h2>
       </div>
 
@@ -129,57 +129,43 @@
       </ul>
     </section>
 
-    <section class="section section-dates" id="dates">
+    <section class="section" id="tickets">
       <div class="section-head">
-        <p class="kicker">Даты</p>
-        <h2>Где и когда</h2>
-        <p class="section-note">Города и залы — пример. Подставим афишу заказчика.</p>
+        <p class="kicker">Билеты</p>
+        <h2>Даты и покупка</h2>
       </div>
 
-      <div class="filters" role="group" aria-label="Город">
-        <button type="button" class="chip is-on" data-city-filter="all">Все</button>
-        <button type="button" class="chip" data-city-filter="Москва">Москва</button>
-        <button type="button" class="chip" data-city-filter="Санкт-Петербург">Санкт-Петербург</button>
-        <button type="button" class="chip" data-city-filter="Казань">Казань</button>
-        <button type="button" class="chip" data-city-filter="Екатеринбург">Екатеринбург</button>
+      <div class="dates">
+        <article class="date">
+          <p class="date-day">16</p>
+          <div class="date-info">
+            <p class="date-when">октября 2026, пятница</p>
+            <h3>Театр на Страстном</h3>
+            <p>19:00</p>
+          </div>
+          <a class="btn btn-small js-tickets" href="#">Купить билет</a>
+        </article>
+        <article class="date">
+          <p class="date-day">25</p>
+          <div class="date-info">
+            <p class="date-when">декабря 2026, пятница</p>
+            <h3>Театр на Страстном</h3>
+            <p>19:00</p>
+          </div>
+          <a class="btn btn-small js-tickets" href="#">Купить билет</a>
+        </article>
       </div>
 
-      <div class="dates" id="date-list">
-        <article class="date" data-city="Москва" data-id="msk-1">
-          <p class="date-day">12</p>
-          <div class="date-info">
-            <p class="date-when">октября 2026, воскресенье</p>
-            <h3>Москва</h3>
-            <p>Концертный зал «Площадка» · 19:00</p>
+      <div class="partners">
+        <h3>Партнёры</h3>
+        <article class="partner">
+          <p class="partner-logo">Афиша</p>
+          <div>
+            <p><a href="https://www.afisha.ru" target="_blank" rel="noopener">afisha.ru</a></p>
+            <p>ООО «Компания Афиша»</p>
+            <p><a href="mailto:support@afisha.ru">support@afisha.ru</a></p>
+            <p><a href="tel:+78005056791">+7 (800) 505-67-91</a></p>
           </div>
-          <a class="btn btn-small" href="#tickets" data-buy="msk-1">Билеты</a>
-        </article>
-        <article class="date" data-city="Санкт-Петербург" data-id="spb-1">
-          <p class="date-day">26</p>
-          <div class="date-info">
-            <p class="date-when">октября 2026, воскресенье</p>
-            <h3>Санкт-Петербург</h3>
-            <p>Театр «Площадка» · 19:00</p>
-          </div>
-          <a class="btn btn-small" href="#tickets" data-buy="spb-1">Билеты</a>
-        </article>
-        <article class="date" data-city="Казань" data-id="kzn-1">
-          <p class="date-day">08</p>
-          <div class="date-info">
-            <p class="date-when">ноября 2026, воскресенье</p>
-            <h3>Казань</h3>
-            <p>Зал «Площадка» · 18:00</p>
-          </div>
-          <a class="btn btn-small" href="#tickets" data-buy="kzn-1">Билеты</a>
-        </article>
-        <article class="date" data-city="Екатеринбург" data-id="ekb-1">
-          <p class="date-day">22</p>
-          <div class="date-info">
-            <p class="date-when">ноября 2026, воскресенье</p>
-            <h3>Екатеринбург</h3>
-            <p>Дворец культуры «Площадка» · 18:00</p>
-          </div>
-          <a class="btn btn-small" href="#tickets" data-buy="ekb-1">Билеты</a>
         </article>
       </div>
     </section>
@@ -245,6 +231,15 @@
       </ul>
     </section>
 
+    <section class="section" id="groups">
+      <div class="section-head">
+        <p class="kicker">Группам</p>
+        <h2>Корпоративные продажи</h2>
+        <p class="section-note">Оставьте заявку на групповой заказ — наш менеджер свяжется с вами, чтобы уточнить детали и оформить бронирование.</p>
+      </div>
+      <button class="btn" type="button" data-open-group>Оставить заявку</button>
+    </section>
+
     <section class="section section-reviews" id="reviews">
       <div class="section-head">
         <p class="kicker">Отзывы</p>
@@ -270,28 +265,6 @@
       </div>
     </section>
 
-    <section class="tickets" id="tickets">
-      <div class="tickets-copy">
-        <p class="kicker kicker-light">Билеты</p>
-        <h2>Покупка</h2>
-        <p>Выберите дату — ниже откроется место для виджета. Код оператора вставим, когда пришлёте ссылку или фрагмент для встраивания.</p>
-        <ol class="steps">
-          <li>Дата и город</li>
-          <li>Место в зале</li>
-          <li>Оплата на стороне билетного оператора</li>
-        </ol>
-      </div>
-
-      <div class="widget" aria-live="polite">
-        <p class="widget-kicker">Виджет билетов</p>
-        <h3 id="widget-title">12 октября · Москва</h3>
-        <p id="widget-meta">Концертный зал «Площадка», 19:00</p>
-        <div class="widget-frame">
-          <p>Сюда встанет виджет продажи билетов.</p>
-          <p>Пока это пустая рамка под код заказчика.</p>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
@@ -299,11 +272,33 @@
       <p class="logo logo-footer" aria-hidden="true"><span>Куль</span><span>тура</span></p>
       <div>
         <p>Спектакль «Ночные забавы»</p>
-        <p>Почта и телефон появятся с материалами заказчика.</p>
+        <p><a href="mailto:NovTeart@yandex.ru">NovTeart@yandex.ru</a></p>
       </div>
-      <a class="btn btn-small" href="#tickets">Купить билет</a>
+      <div class="socials">
+        <a class="social" href="#" data-social aria-label="ВКонтакте">VK</a>
+        <a class="social" href="#" data-social aria-label="Telegram">TG</a>
+      </div>
     </div>
   </footer>
+
+  <dialog class="modal" id="group-dialog">
+    <form class="modal-card" action="https://formsubmit.co/NovTeart@yandex.ru" method="POST">
+      <p class="kicker">Заявка</p>
+      <h2>Групповой заказ</h2>
+      <input type="hidden" name="_subject" value="Заявка на групповой заказ — Ночные забавы">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://kibosh13.github.io/nochnye-zabavy/#groups">
+      <label>ФИО <input name="ФИО" autocomplete="name" required></label>
+      <label>Телефон <input name="Телефон" type="tel" autocomplete="tel" required></label>
+      <label>Почта <input name="Почта" type="email" autocomplete="email" required></label>
+      <label>Количество билетов <input name="Количество билетов" type="number" min="1" inputmode="numeric" required></label>
+      <div class="modal-actions">
+        <button class="btn" type="submit">Отправить</button>
+        <button class="btn btn-quiet" type="button" data-close-group>Закрыть</button>
+      </div>
+    </form>
+  </dialog>
 
   <script src="main.js"></script>
 </body>
