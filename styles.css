@@ -187,10 +187,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
   position: relative;
   z-index: 1;
   align-self: end;
-  width: 100%;
-  margin: 0;
-  padding: 36px max(20px, calc((100% - var(--wide)) / 2)) 32px;
+  justify-self: start;
+  width: min(520px, calc(100% - 48px));
+  margin: 0 0 36px max(24px, calc((100% - var(--wide)) / 2));
+  padding: 28px 32px 24px;
   background: #10192b;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 5.6vw, 72px);
 }
 
 .eyebrow {
@@ -235,10 +240,10 @@ h1 {
 }
 
 .hero-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 28px;
-  margin: 32px 0 0;
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr);
+  gap: 16px 22px;
+  margin: 28px 0 0;
 }
 
 .hero-meta dt {
@@ -754,8 +759,14 @@ blockquote footer span {
 
 @media (max-width: 680px) {
   .hero { min-height: calc(100svh - var(--header) - 88px); }
-  .hero-content { padding-top: 28px; padding-bottom: 28px; }
-  h1 { font-size: 52px; }
+  .hero-content {
+    width: calc(100% - 32px);
+    margin: 0 16px 16px;
+    padding: 22px 20px 18px;
+  }
+  .hero h1 { font-size: 46px; }
+  .hero-meta { grid-template-columns: 1fr 1fr; }
+  .hero-meta div:last-child { grid-column: 1 / -1; }
   .section { padding: 64px 20px; }
   .story,
   .reviews,
