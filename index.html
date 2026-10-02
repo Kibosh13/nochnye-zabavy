@@ -13,7 +13,7 @@
 <body>
   <a class="skip" href="#about">К содержанию</a>
 
-  <p class="draft" role="note">Черновик. Роли в составе пока без подписи. Ссылку на виджет билетов и адреса соцсетей подставим, когда пришлёте.</p>
+  <p class="draft" role="note">Черновик. Ссылку на виджет билетов и адреса соцсетей подставим, когда пришлёте.</p>
 
   <header class="header" id="top">
     <div class="header-inner">
@@ -31,7 +31,7 @@
       <nav class="nav" id="nav" aria-label="Разделы страницы">
         <a href="#about">О спектакле</a>
         <a href="#tickets">Билеты</a>
-        <a href="#cast">Состав</a>
+        <a href="#cast">Актёры</a>
         <a href="#groups">Группам</a>
         <a href="#reviews">Отзывы</a>
       </nav>
@@ -73,7 +73,6 @@
 
     <section class="section" id="about">
       <div class="section-head">
-        <p class="kicker">Сюжет</p>
         <h2>О спектакле</h2>
       </div>
 
@@ -131,8 +130,7 @@
 
     <section class="section" id="tickets">
       <div class="section-head">
-        <p class="kicker">Билеты</p>
-        <h2>Даты и покупка</h2>
+        <h2>Билеты</h2>
       </div>
 
       <div class="dates">
@@ -157,7 +155,7 @@
       </div>
 
       <div class="partners">
-        <h3>Партнёры</h3>
+        <h3>Партнеры по реализации билетов</h3>
         <article class="partner">
           <p class="partner-logo">Афиша</p>
           <div>
@@ -172,60 +170,49 @@
 
     <section class="section" id="cast">
       <div class="section-head">
-        <p class="kicker">Состав</p>
-        <h2>Кто на сцене</h2>
-        <p class="section-note">Состав может меняться. Роли подставим, когда их пришлёте.</p>
+        <h2>Актёры</h2>
+        <p class="section-note">Состав может меняться.</p>
       </div>
 
       <ul class="cast">
         <li>
           <img src="img/cast/tarasov.jpg" alt="Никита Тарасов">
-          <p class="role">Роль</p>
           <h3>Никита Тарасов</h3>
         </li>
         <li>
           <img src="img/cast/ulyanov.jpg" alt="Дмитрий Ульянов">
-          <p class="role">Роль</p>
           <h3>Дмитрий Ульянов</h3>
         </li>
         <li>
           <img src="img/cast/barabash.png" alt="Алексей Барабаш">
-          <p class="role">Роль</p>
           <h3>Алексей Барабаш</h3>
         </li>
         <li>
           <img src="img/cast/antonova.jpg" alt="Анна Антонова">
-          <p class="role">Роль</p>
           <h3>Анна Антонова</h3>
         </li>
         <li>
           <img class="is-wide" src="img/cast/akatova.png" alt="Анастасия Акатова">
-          <p class="role">Роль</p>
           <h3>Анастасия Акатова</h3>
         </li>
         <li>
           <img src="img/cast/tarkhanova.jpg" alt="Глафира Тарханова">
-          <p class="role">Роль</p>
           <h3>Глафира Тарханова</h3>
         </li>
         <li>
           <img src="img/cast/lakshin.jpg" alt="Иван Лакшин">
-          <p class="role">Роль</p>
           <h3>Иван Лакшин</h3>
         </li>
         <li>
-          <img class="is-pair" src="img/cast/suvorova.jpg" alt="Екатерина Суворова">
-          <p class="role">Роль</p>
+          <img src="img/cast/suvorova.jpg" alt="Екатерина Суворова">
           <h3>Екатерина Суворова</h3>
         </li>
         <li>
           <img src="img/cast/yakovlev.png" alt="Денис Яковлев">
-          <p class="role">Роль</p>
           <h3>Денис Яковлев</h3>
         </li>
         <li>
           <img src="img/cast/lapteva.jpg" alt="Ульяна Лаптева">
-          <p class="role">Роль</p>
           <h3>Ульяна Лаптева</h3>
         </li>
       </ul>
@@ -233,16 +220,14 @@
 
     <section class="section" id="groups">
       <div class="section-head">
-        <p class="kicker">Группам</p>
-        <h2>Корпоративные продажи</h2>
-        <p class="section-note">Оставьте заявку на групповой заказ — наш менеджер свяжется с вами, чтобы уточнить детали и оформить бронирование.</p>
+        <h2>Группам</h2>
+        <p class="section-note">Если вы хотите посетить спектакль большой компанией, оставьте заявку на групповой заказ — наш менеджер свяжется с вами, чтобы уточнить детали и оформить бронирование.</p>
       </div>
       <button class="btn" type="button" data-open-group>Оставить заявку</button>
     </section>
 
     <section class="section section-reviews" id="reviews">
       <div class="section-head">
-        <p class="kicker">Отзывы</p>
         <h2>Что говорят зрители</h2>
       </div>
 
@@ -283,16 +268,15 @@
 
   <dialog class="modal" id="group-dialog">
     <form class="modal-card" action="https://formsubmit.co/NovTeart@yandex.ru" method="POST">
-      <p class="kicker">Заявка</p>
-      <h2>Групповой заказ</h2>
+      <h2>Заявка</h2>
       <input type="hidden" name="_subject" value="Заявка на групповой заказ — Ночные забавы">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_next" value="https://kibosh13.github.io/nochnye-zabavy/#groups">
       <label>ФИО <input name="ФИО" autocomplete="name" required></label>
-      <label>Телефон <input name="Телефон" type="tel" autocomplete="tel" required></label>
+      <label>Телефон <input name="Телефон" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 (999) 999-99-99"></label>
       <label>Почта <input name="Почта" type="email" autocomplete="email" required></label>
-      <label>Количество билетов <input name="Количество билетов" type="number" min="1" inputmode="numeric" required></label>
+      <label>Количество билетов <input name="Количество билетов" type="number" min="1" inputmode="numeric"></label>
       <div class="modal-actions">
         <button class="btn" type="submit">Отправить</button>
         <button class="btn btn-quiet" type="button" data-close-group>Закрыть</button>

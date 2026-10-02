@@ -181,21 +181,29 @@ button, a { -webkit-tap-highlight-color: transparent; }
   animation: hero-in 1.8s ease-out both;
 }
 
-.hero-shade { display: none; }
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 100% 85% at 24% 86%, rgba(8, 12, 22, 0.96) 0%, rgba(8, 12, 22, 0.82) 38%, rgba(8, 12, 22, 0.28) 68%, rgba(8, 12, 22, 0) 82%),
+    linear-gradient(to top, rgba(8, 12, 22, 0.94) 0%, rgba(8, 12, 22, 0.72) 32%, rgba(8, 12, 22, 0.28) 58%, rgba(8, 12, 22, 0) 100%),
+    linear-gradient(to right, rgba(8, 12, 22, 0.7) 0%, rgba(8, 12, 22, 0.28) 46%, rgba(8, 12, 22, 0) 72%);
+}
 
 .hero-content {
   position: relative;
   z-index: 1;
   align-self: end;
-  justify-self: start;
-  width: min(520px, calc(100% - 48px));
-  margin: 0 0 36px max(24px, calc((100% - var(--wide)) / 2));
-  padding: 28px 32px 24px;
-  background: #10192b;
+  width: 100%;
+  max-width: var(--wide);
+  margin: 0 auto;
+  padding: 48px 20px 40px;
+  background: none;
 }
 
 .hero h1 {
-  font-size: clamp(48px, 5.6vw, 72px);
+  font-size: clamp(56px, 8vw, 104px);
+  text-shadow: 0 12px 36px rgba(8, 12, 22, 0.7);
 }
 
 .eyebrow {
@@ -230,6 +238,7 @@ h1 {
   margin: 18px 0 0;
   font-size: 18px;
   color: rgba(246, 240, 230, 0.94);
+  text-shadow: 0 8px 28px rgba(8, 12, 22, 0.7);
 }
 
 .hero-actions {
@@ -275,7 +284,16 @@ section[id] { scroll-margin-top: calc(var(--header) + 12px); }
   padding: 88px 20px;
 }
 
-.section-head { max-width: 640px; margin-bottom: 36px; }
+.section-head { max-width: 720px; margin-bottom: 36px; }
+
+.section-head h2 {
+  margin: 0;
+  font-family: var(--script);
+  font-weight: 400;
+  font-size: clamp(44px, 5vw, 58px);
+  line-height: 1;
+  color: var(--red);
+}
 
 .kicker {
   margin: 0;
@@ -316,6 +334,7 @@ h2 {
   height: 520px;
   overflow: hidden;
   background: #10192b;
+  cursor: pointer;
 }
 
 .stage-slide {
@@ -671,7 +690,14 @@ blockquote footer span {
   color: var(--ink);
 }
 
-.modal-card h2 { font-size: 40px; }
+.modal-card h2 {
+  margin: 0;
+  font-family: var(--script);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--red);
+}
 
 .modal-card label {
   display: grid;
@@ -759,12 +785,8 @@ blockquote footer span {
 
 @media (max-width: 680px) {
   .hero { min-height: calc(100svh - var(--header) - 88px); }
-  .hero-content {
-    width: calc(100% - 32px);
-    margin: 0 16px 16px;
-    padding: 22px 20px 18px;
-  }
-  .hero h1 { font-size: 46px; }
+  .hero-content { padding: 32px 20px 28px; }
+  .hero h1 { font-size: 52px; }
   .hero-meta { grid-template-columns: 1fr 1fr; }
   .hero-meta div:last-child { grid-column: 1 / -1; }
   .section { padding: 64px 20px; }
