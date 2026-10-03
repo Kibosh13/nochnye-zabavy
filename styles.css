@@ -643,22 +643,32 @@ blockquote footer span {
 
 .partner a { color: var(--ink); }
 
+.partner > div { min-width: 0; }
+
 .partner-logo {
-  display: grid;
-  place-items: center;
-  width: 148px;
-  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 168px;
+  min-width: 168px;
+  max-width: 168px;
+  height: 56px;
   margin: 0;
-  flex: none;
-  padding: 10px 12px;
-  background: #fff;
-  border: 1px solid var(--line);
+  flex: 0 0 168px;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
 }
 
 .partner-logo img {
-  width: 100%;
-  height: 100%;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 168px;
+  max-height: 56px;
   object-fit: contain;
+  object-position: left center;
 }
 
 .socials { display: flex; gap: 8px; }
@@ -806,6 +816,13 @@ blockquote footer span {
 
   .date .btn { grid-column: 1 / -1; }
 
+  .partner-logo {
+    width: 112px;
+    min-width: 112px;
+    max-width: 112px;
+    flex-basis: 112px;
+  }
+  .partner-logo img { max-width: 112px; max-height: 48px; }
   .cast { grid-template-columns: 1fr 1fr; gap: 18px 12px; }
   .cast h3 { font-size: 24px; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
