@@ -646,14 +646,19 @@ blockquote footer span {
 .partner-logo {
   display: grid;
   place-items: center;
-  width: 88px;
-  height: 88px;
+  width: 148px;
+  height: 72px;
   margin: 0;
   flex: none;
-  background: var(--navy);
-  color: var(--cream);
-  font-family: var(--serif);
-  font-size: 22px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.partner-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .socials { display: flex; gap: 8px; }
