@@ -1,6 +1,27 @@
 const DEFAULT_TICKET = { id: "897838", type: "event" };
+const TICKET_CLIENT_KEY = "6860181c-d02c-4b5b-b8c9-d9dc7f229f75";
+const TICKET_REGION_ID = 213;
+
+function widgetAllowsEmbed() {
+  const host = location.hostname;
+  return host === "nastrastnom.ru" || host.endsWith(".nastrastnom.ru")
+    || host === "teatr-production.ru" || host.endsWith(".teatr-production.ru");
+}
+
+function widgetUrl(id, type) {
+  const kind = type === "session" ? "sessions" : "events";
+  const url = new URL(`https://widget.afisha.yandex.ru/w/${kind}/${encodeURIComponent(id)}`);
+  url.searchParams.set("clientKey", TICKET_CLIENT_KEY);
+  if (type !== "session") url.searchParams.set("regionId", String(TICKET_REGION_ID));
+  return url.toString();
+}
 
 function openTickets(id, type) {
+  if (!widgetAllowsEmbed()) {
+    const popup = window.open(widgetUrl(id, type), "_blank");
+    if (popup) return;
+  }
+
   const queue = window.YandexTicketsDealer = window.YandexTicketsDealer || [];
   queue.push(["getDealer", (dealer) => {
     dealer.open({ id, type });
