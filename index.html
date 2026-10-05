@@ -13,7 +13,7 @@
 <body>
   <a class="skip" href="#about">К содержанию</a>
 
-  <p class="draft" role="note">Черновик. Ссылку на виджет билетов и адреса соцсетей подставим, когда пришлёте.</p>
+  <p class="draft" role="note">Черновик. Адрес Telegram подставим, когда пришлёте.</p>
 
   <header class="header" id="top">
     <div class="header-inner">
@@ -141,7 +141,7 @@
             <h3>Театр на Страстном</h3>
             <p>19:00</p>
           </div>
-          <a class="btn btn-small js-tickets" href="#">Купить билет</a>
+          <a class="btn btn-small js-tickets" href="#" data-ticket-id="897838" data-ticket-type="event">Купить билет</a>
         </article>
         <article class="date">
           <p class="date-day">12</p>
@@ -150,7 +150,7 @@
             <h3>Театр на Страстном</h3>
             <p>19:00</p>
           </div>
-          <a class="btn btn-small js-tickets" href="#">Купить билет</a>
+          <a class="btn btn-small js-tickets" href="#" data-ticket-id="ticketsteam-10616@451112" data-ticket-type="session">Купить билет</a>
         </article>
       </div>
 
@@ -318,6 +318,20 @@
     </form>
   </dialog>
 
+  <script>
+    var dealerName = "YandexTicketsDealer";
+    var dealer = window[dealerName] = window[dealerName] || [];
+    dealer.push(["setDefaultClientKey", "6860181c-d02c-4b5b-b8c9-d9dc7f229f75"]);
+    dealer.push(["setDefaultRegionId", 213]);
+    (function () {
+      var rnd = "?" + new Date().getTime() * Math.random();
+      var script = document.createElement("script");
+      var target = document.getElementsByTagName("script")[0];
+      script.async = true;
+      script.src = "https://widget.afisha.yandex.ru/dealer/dealer.js" + rnd;
+      target.parentNode.insertBefore(script, target);
+    })();
+  </script>
   <script src="main.js"></script>
 </body>
 </html>

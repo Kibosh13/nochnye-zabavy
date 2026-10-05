@@ -1,4 +1,11 @@
-const TICKET_URL = "";
+const DEFAULT_TICKET = { id: "897838", type: "event" };
+
+function openTickets(id, type) {
+  const queue = window.YandexTicketsDealer = window.YandexTicketsDealer || [];
+  queue.push(["getDealer", (dealer) => {
+    dealer.open({ id, type });
+  }]);
+}
 
 const nav = document.querySelector("#nav");
 const toggle = document.querySelector(".nav-toggle");
@@ -17,13 +24,10 @@ nav.addEventListener("click", (event) => {
 });
 
 document.querySelectorAll(".js-tickets").forEach((link) => {
-  if (TICKET_URL) {
-    link.href = TICKET_URL;
-    link.target = "_blank";
-    link.rel = "noopener";
-    return;
-  }
-  link.addEventListener("click", (event) => event.preventDefault());
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    openTickets(link.dataset.ticketId || DEFAULT_TICKET.id, link.dataset.ticketType || DEFAULT_TICKET.type);
+  });
 });
 
 document.querySelectorAll("[data-social]").forEach((link) => {
