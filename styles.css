@@ -90,9 +90,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   justify-items: center;
   text-decoration: none;
   font-family: var(--serif);
-  font-size: 22px;
-  line-height: 0.82;
-  letter-spacing: 0.14em;
+  font-size: 18px;
+  line-height: 0.9;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cream);
 }
