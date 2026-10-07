@@ -375,7 +375,7 @@ h2 {
 
 .facts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   margin: 40px 0 0;
   padding: 0;
@@ -624,7 +624,7 @@ blockquote footer span {
 .widget-frame p { margin: 0; color: var(--ink); }
 .widget-frame p:last-child { color: var(--muted); }
 
-.partners { margin-top: 48px; }
+.partners { margin-top: 0; }
 
 .partners h3 {
   margin: 0 0 16px;
@@ -641,7 +641,7 @@ blockquote footer span {
 
 .partner p { margin: 0; }
 
-.partner a { color: var(--ink); }
+.partner a { color: var(--ink); text-decoration: none; }
 
 .partner > div { min-width: 0; }
 
@@ -762,7 +762,11 @@ blockquote footer span {
 .footer p { margin: 0; }
 .footer a { color: var(--cream); }
 .footer-inner > div { margin-right: auto; }
-.logo-footer { color: var(--cream); }
+.logo-footer {
+  color: var(--cream);
+  font-size: 20px;
+  letter-spacing: 0.08em;
+}
 
 :focus-visible {
   outline: 2px solid var(--red);
